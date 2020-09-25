@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "548088772430",
+    "firebase_url": "https://my-manne.firebaseio.com",
+    "project_id": "my-manne",
+    "storage_bucket": "my-manne.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:548088772430:android:48e07020994bd541af501f",
+        "android_client_info": {
+          "package_name": "com.ofceab.manne"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "548088772430-8if3b64g55brbecscuij9lb7e4dhhdg1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB6MyzdmxXPme4YukAKUpFU3-BkhwVnwCM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "548088772430-8if3b64g55brbecscuij9lb7e4dhhdg1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
