@@ -5,77 +5,115 @@ class TrendsListItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ClipRRect(
-      borderRadius: BorderRadius.circular(25),
+    return Padding(
+      padding: const EdgeInsets.only(left: 25),
       child: Container(
-        height: 300,
         child: Stack(
           children: [
-            Image.asset(
-              'assets/header-image.webp',
-              fit: BoxFit.cover,
+            ClipRRect(
+              borderRadius: BorderRadius.circular(25),
+              child: SizedBox(
+                height: 170,
+                child: Image.asset(
+                  'assets/poisson-frais.jpg',
+                  fit: BoxFit.cover,
+                  color: Colors.black.withOpacity(.2),
+                  colorBlendMode: BlendMode.darken,
+                ),
+              ),
             ),
             Positioned(
-                bottom: 0,
-                left: 0,
-                right: 0,
-                child: Container(
-                  height: 80,
-                  child: Column(
-                    children: [
-                      Text(
-                        'Delicious Healthy Kebab',
-                        style: Theme.of(context).textTheme.subtitle1.copyWith(
-                              fontWeight: FontWeight.w800,
+              bottom: 30,
+              left: 16,
+              right: 16,
+              child: Container(
+                height: 100,
+                child: Card(
+                  elevation: 2,
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(15)),
+                  child: Padding(
+                    padding:
+                        const EdgeInsets.symmetric(horizontal: 10, vertical: 7),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          'Delicious Healthy Kebab',
+                          style: Theme.of(context).textTheme.subtitle1.copyWith(
+                                fontWeight: FontWeight.w800,
+                              ),
+                        ),
+                        Text('Quick and easy to do Whaouhh ....'),
+                        Divider(),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            GestureDetector(
+                              onTap: () {},
+                              child: Row(
+                                children: [
+                                  Icon(
+                                    Icons.star,
+                                    color: Colors.yellow[700],
+                                  ),
+                                  SizedBox(width: 3,),
+                                  Text(
+                                    '4.5',
+                                    style: Theme.of(context).textTheme.caption.copyWith(
+                                      fontSize: 17
+                                    ),
+                                  )
+                                ],
+                              ),
                             ),
-                      ),
-                      Text('Quick and easy to do Whaouhh ....'),
-                      Row(
-                        children: [
-                          RaisedButton.icon(
-                              elevation: 0.0,
-                              onPressed: () {},
-                              icon: Icon(Icons.star),
-                              label: Text(
-                                '4.3',
-                                style: Theme.of(context)
-                                    .textTheme
-                                    .caption
-                                    .copyWith(
-                                        fontSize: 20,
-                                        fontWeight: FontWeight.w600),
-                              )),
-                          RaisedButton.icon(
-                              elevation: 0.0,
-                              onPressed: () {},
-                              icon: Text('min .Quantity'),
-                              label: Text(
-                                '4',
-                                style: Theme.of(context)
-                                    .textTheme
-                                    .caption
-                                    .copyWith(
-                                        fontSize: 20,
-                                        fontWeight: FontWeight.w600),
-                              )),
-                          RaisedButton.icon(
-                              elevation: 0.0,
-                              onPressed: () {},
-                              icon: Icon(Icons.money),
-                              label: Text(
-                                '4.500 FCFA',
-                                style: Theme.of(context)
-                                    .textTheme
-                                    .caption
-                                    .copyWith(
-                                        fontSize: 20,
-                                        fontWeight: FontWeight.w600),
-                              ))
-                        ],
-                      ),
-                    ],
+                                                        GestureDetector(
+                              onTap: () {},
+                              child: Row(
+                                children: [
+                                  Icon(
+                                    Icons.monetization_on_rounded,
+                                    color: Colors.blue,
+                                  ),
+                                  SizedBox(width: 3,),
+                                  Text(
+                                    '3.500',
+                                    style: Theme.of(context).textTheme.caption.copyWith(
+                                      fontSize: 17
+                                    ),
+                                  )
+                                ],
+                              ),
+                            ),
+                            GestureDetector(
+                              onTap: () {
+                                //TODO
+                              },
+                              child: Row(
+                                children: [
+                                  Text(
+                                    'min.qte:',
+                                    style: Theme.of(context).textTheme.caption.copyWith(
+                                    fontSize: 17,
+                                    ),
+                                  ),
+                                  SizedBox(width: 3,),
+                                  Text(
+                                    '2',
+                                    style: Theme.of(context).textTheme.caption.copyWith(
+                                    ),
+                                  )
+                                ],
+                              ),
+                            ),
+                          ],
+                        )
+                      ],
+                    ),
                   ),
-                ))
+                ),
+              ),
+            )
           ],
         ),
       ),

@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:manne/cubit/bottom_navigation_bar.dart';
 
 import 'presentation/screens/root.dart';
 
@@ -13,10 +15,16 @@ class App extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      theme: ThemeData(primaryColor: Colors.orange),
-      debugShowCheckedModeBanner: false,
-      home: Root(),
+    return MultiBlocProvider(
+      providers: [
+        BlocProvider<BottonNavigationCubit>(
+            create: (context) => BottonNavigationCubit(0))
+      ],
+      child: MaterialApp(
+        theme: ThemeData(primaryColor: Colors.orange),
+        debugShowCheckedModeBanner: false,
+        home: Root(),
+      ),
     );
   }
 }
